@@ -1,8 +1,16 @@
 from pymongo import MongoClient
 from datetime import datetime
 from bson.objectid import ObjectId
+import streamlit as st
+from dotenv import load_dotenv
 
-client = MongoClient("mongodb://localhost:27017/")
+load_dotenv()
+try:
+    cs = st.secrets("connecter")
+except:
+    cs = os.getenv("connecter")
+
+client = MongoClient(cs)
 database = client["AI_Job_Search_Agent"]
 collection = database["Search_History"]
 
