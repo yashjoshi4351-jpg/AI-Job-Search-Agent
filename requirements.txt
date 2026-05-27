@@ -1,12 +1,6 @@
 streamlit
-os
-tempfile
 pymongo
-datetime
-bson.objectid
-langchain_groq
-typing
-langgraph.graph
+langchain-groq
+langgraph
 requests
-json
 pdfplumber
