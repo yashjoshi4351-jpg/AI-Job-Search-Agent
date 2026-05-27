@@ -1,1 +1,12 @@
-
+streamlit
+os
+tempfile
+pymongo
+datetime
+bson.objectid
+langchain_groq
+typing
+langgraph.graph
+requests
+json
+pdfplumber
