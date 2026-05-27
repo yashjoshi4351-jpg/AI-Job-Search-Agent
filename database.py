@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 try:
-    cs = st.secrets("connecter")
+    cs = st.secrets["connecter"]
 except:
     cs = os.getenv("connecter")
 
