@@ -8,10 +8,10 @@ import os
 load_dotenv()
 
 try:
-    Job_API_Key = st.secrets("adzuna")
-    GROQ_API_KEY  = st.secrets("groq")
-    API_ID = st.secrets("adzuna_id")
-    INSIGHTS = st.secrets("company_insights")
+    Job_API_Key = st.secrets["adzuna"]
+    GROQ_API_KEY  = st.secrets["groq"]
+    API_ID = st.secrets["adzuna_id"]
+    INSIGHTS = st.secrets["company_insights"]
 except:
     Job_API_Key = os.getenv("adzuna")
     GROQ_API_KEY = os.getenv("groq")
