@@ -3,13 +3,20 @@
 # ==========
 
 from dotenv import load_dotenv
+import streamlit as st
 import os
 load_dotenv()
 
-Job_API_Key = os.getenv("adzuna")
-GROQ_API_KEY  = os.getenv("groq")
-API_ID = os.getenv("adzuna_id")
-INSIGHTS = os.getenv("company_insights")
+try:
+    Job_API_Key = st.secrets("adzuna")
+    GROQ_API_KEY  = st.secrets("groq")
+    API_ID = st.secrets("adzuna_id")
+    INSIGHTS = st.secrets("company_insights")
+except:
+    Job_API_Key = os.getenv("adzuna")
+    GROQ_API_KEY = os.getenv("groq")
+    API_ID = os.getenv("adzuna_id")
+    INSIGHTS = os.getenv("company_insights")
 
 
 # ================
